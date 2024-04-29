@@ -25,6 +25,7 @@ ul {
     padding-left: 0;
     list-style-type: none;
 }
+
 address {
     font-style: normal;
 }
@@ -54,7 +55,7 @@ img{
     overflow: hidden;
 }
 
-.section-title {
+.title{
     font-weight: 700;
     font-size: 36px;
     line-height: 1.11;
@@ -67,12 +68,7 @@ img{
 /*=======HEADER======*/
 
 .header{
-    height: 56px;
-    width: 320px;
-    padding: 17.5px 16px;
     border-bottom: 1px solid #e7e9fc;
-    width: 1440px;
-    height: 72px;
     box-shadow: 0 1px 6px 0 rgba(46, 47, 66, 0.08),
     0 1px 1px 0 rgba(46, 47, 66, 0.16), 0 2px 1px 0 rgba(46, 47, 66, 0.08);
     background: #fff;
@@ -84,24 +80,21 @@ img{
     display: flex;
 }
 
-.navigation{
-    display: flex;
-    align-items: center;
-}
-
-
 a {
     text-decoration: none;
 }
 
 .logo {
-    color:  #4D5AE5;
-    font-family: Raleway, sans-serif;
-    font-size: 18px;
+    font-family: "Raleway", sans-serif;
     font-weight: 700;
-    line-height: 1.17;
+    font-size: 18px;
+    line-height: 1.16;
     letter-spacing: 0.03em;
     text-transform: uppercase;
+    color: #4d5ae5;
+    display: block;
+    padding-top: 16px;
+    padding-bottom: 16px;
 }
 
 .logo-part {
@@ -109,6 +102,7 @@ a {
 }
 
 .nav-link {
+    font-family: "Roboto", sans-serif;
     color:  #2E2F42;
     font-size: 16px;
     font-weight: 500;
@@ -118,13 +112,13 @@ a {
     display: block;
 }
 
+.nav-list {
+    display: none;
+}
+
 .nav-link:hover,
 .nav-link:focus{
     color: #404BBF;
-}
-
-.nav-list{
-    display: none;
 }
 
 .address-list{
@@ -132,6 +126,7 @@ a {
 }
 
 .address-link {
+    font-weight: 400;
     color:  #434455;
     font-size: 16px;
     line-height: 1.5; 
@@ -305,7 +300,7 @@ a {
 
 .hero-button:hover,
 .hero-button:focus {
-    background-color: #404bbf;
+background-color: #404bbf;
 }
 
 
@@ -966,8 +961,9 @@ input {
 /*============================= SCREEN ========================================*/
 
 @media screen and (min-width: 768px) {
-    .container {
+.container {
     width: 768px;
+}
 }
 
   /*-------------------- modal window -------------------- */
@@ -991,16 +987,16 @@ input {
 
 .header-container {
     display: flex;
-    /* align-items: center; */
+    align-items: center; 
 }
 
 .header-logo {
     margin-right: 120px;
 }
 
-.header-nav {
+.navigation {
     display: flex;
-    flex-grow: 1;
+    margin-right: auto;
     align-items: center;
 }
 
@@ -1016,7 +1012,6 @@ input {
 .nav-list {
     display: flex;
     gap: 40px;
-    transition: color 250ms cubic-bezier(0.4, 0, 0.2, 1);
 }
 
 .nav-link {
@@ -1027,22 +1022,21 @@ input {
     letter-spacing: 0.02em;
     color: #2e2f42;
     display: block;
-    padding: 16px 0;
+    padding: 24px 0 24px;
 }
 
-.nav-link.studio {
+.studio {
     color: #404bbf;
     transition: color 250ms cubic-bezier(0.4, 0, 0.2, 1);
     position: relative;
 }
 
 .address-list {
-    display: flex;
-    flex-direction: column;
-    gap: 12px;
-    margin-left: auto;
-    padding: 16px 0;
-    transition: color 250ms cubic-bezier(0.4, 0, 0.2, 1);
+    display: none;
+}
+
+.address-item {
+
 }
 
 .address-link {
@@ -1065,6 +1059,7 @@ input {
     height: 4px;
     background-color: #404bbf;
 }
+
 
   /*-------------------- hero -------------------- */
 
@@ -1144,8 +1139,6 @@ input {
     width: 584px;
     flex-direction: row;
     flex-wrap: wrap;
-    justify-content: center;
-    align-items: center;
     gap: 72px 24px;
     margin: 0 auto;
 }
@@ -1162,6 +1155,9 @@ input {
     flex-direction: row;
     gap: 24px;
 }
+
+.footer-input {
+    width: 264px;
 }
 
 /*=============================== DESKTOP ========================================*/
@@ -1172,7 +1168,7 @@ input {
     padding-left: 15px;
     padding-right: 15px;
 }
-
+}
   /*-------------------- modal window -------------------- */
 
 .modal {
@@ -1183,8 +1179,6 @@ input {
   /*-------------------- header -------------------- */
 
 .header {
-    width: 1440px;
-    height: 72px;
 }
 
 .header-logo {
@@ -1196,9 +1190,9 @@ input {
 }
 
 .address-list {
+    flex-direction: row;
     gap: 40px;
     margin-left: auto;
-    padding: 24px 0;
 }
 
 .address-link {
@@ -1357,6 +1351,4 @@ input {
     gap: 24px;
 }
 
-.footer-input {
-    width: 264px;
-}
+
